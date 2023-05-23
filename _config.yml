@@ -101,16 +101,5 @@ theme: landscape
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
-# deploy:
-#   type: ''
-
-user:
-	email: 2064878930@qq.com
-	name: 2064878930
-
 deploy:
-  type: git
-  repo: https://github.com/2064878930/2064878930.github.io.git
-  # example, https://github.com/hexojs/hexojs.github.io
-  branch: main
-  token: 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
+  type: ''
