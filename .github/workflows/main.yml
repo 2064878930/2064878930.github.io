@@ -1,0 +1,111 @@
+name: Hexo自动部署
+
+# 当有改动推送到master分支时，启动Action
+
+on: # 触发该actions
+
+  push: # 当提交时触发该事件
+
+    branches: # 指定提交到某分支才触发事件
+
+      - main # 指定提交到main分支触发事件
+
+      #2020年10月后github新建仓库默认分支改为main，注意更改
+
+  release:
+
+    types:
+
+      - published
+
+jobs:
+
+  deploy:
+
+    runs-on: ubuntu-latest # 该actions运行的环境，这里指定在Ubuntu系统环境下运行
+
+    steps:
+
+      - name: 检查分支
+
+        uses: actions/checkout@v2
+
+        with:
+
+          ref: main
+
+      - name: 安装 Node
+
+        uses: actions/setup-node@v1
+
+        with:
+
+          node-version: "16.x"
+
+      - name: 安装 Hexo
+
+        run: | 
+
+          export TZ='Asia/Shanghai'
+
+          npm install hexo-cli -g
+
+      - name: 缓存 Hexo
+
+        uses: actions/cache@v1
+
+        id: cache
+
+        with:
+
+          path: node_modules
+
+          key: ${{runner.OS}}-${{hashFiles('**/package-lock.json')}}
+
+      - name: 安装依赖
+
+        if: steps.cache.outputs.cache-hit != 'true'
+
+        run: | 
+
+          npm -v
+
+          node -v
+
+          npm install -g npm
+
+          npm install --save
+
+      - name: 生成静态文件
+
+        run: | 
+
+          echo "开始清除html文件"
+
+          hexo clean
+
+          echo "开始生成html文件"
+
+          hexo generate
+
+      - name: 部署到服务器
+
+        uses: burnett01/rsync-deployments@4.1
+
+        with:
+
+          # 这里是 rsync 的参数 switches: -avzh --delete --exclude="" --include="" --filter=""
+
+          switches: -avzh
+
+          path: public/    # 将public文件夹同步到服务器下的 PATH 路径
+
+          remote_path: ${{ secrets.PATH }} #服务器的文件存放绝对路径
+
+          remote_host: ${{ secrets.DOMAIN }} #服务器域名或者IP地址
+
+          remote_port: ${{ secrets.EXPORT }} # ssh远程端口(如果没修改过ssh远程端口，默认是22)
+
+          remote_user: ${{ secrets.USER }} # 使用ssh登录的用户
+
+          remote_key: ${{ secrets.PC_PRIVATE_KEY }}
