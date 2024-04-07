@@ -1,5 +1,17 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>新之助Blog</title><link>https://2064878930.github.io</link><description>Hi 今天开心了吗</description><copyright>新之助Blog</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://pic1.zhimg.com/80/v2-7a75440faf7361cf6dbb3f51ca79bbcd_720w.webp?source=1940ef5c</url><title>avatar</title><link>https://2064878930.github.io</link></image><lastBuildDate>Wed, 27 Mar 2024 06:20:44 +0000</lastBuildDate><managingEditor>新之助Blog</managingEditor><ttl>60</ttl><webMaster>新之助Blog</webMaster><item><title>Ubuntu安装Python</title><link>https://2064878930.github.io/post/Ubuntu-an-zhuang-Python.html</link><description>出现 ` 权限问题` 进入超级用户&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>新之助Blog</title><link>https://2064878930.github.io</link><description>Hi 今天开心了吗</description><copyright>新之助Blog</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://pic1.zhimg.com/80/v2-7a75440faf7361cf6dbb3f51ca79bbcd_720w.webp?source=1940ef5c</url><title>avatar</title><link>https://2064878930.github.io</link></image><lastBuildDate>Sun, 07 Apr 2024 18:18:17 +0000</lastBuildDate><managingEditor>新之助Blog</managingEditor><ttl>60</ttl><webMaster>新之助Blog</webMaster><item><title>人声分离工具</title><link>https://2064878930.github.io/post/ren-sheng-fen-li-gong-ju.html</link><description># 人声分离工具&#13;
+&#13;
+1.[NovaMSS | 新一代音乐源分离工具](https://novamss.com/)&#13;
+&#13;
+![image-20240408020945932](https://raw.gitmirror.com/2064878930/blogimg/main/typora/image-20240408020945932.png)&#13;
+&#13;
+` 便捷` ` 中文界面` ` 效果较差` ` 有收费`&#13;
+&#13;
+2.[The Ultimate Vocal Remover Application](https://ultimatevocalremover.com/)&#13;
+&#13;
+![image-20240408021454055](https://raw.gitmirror.com/2064878930/blogimg/main/typora/image-20240408021454055.png)&#13;
+&#13;
+` 效果好` ` 没中文` ` 免费`。</description><guid isPermaLink="true">https://2064878930.github.io/post/ren-sheng-fen-li-gong-ju.html</guid><pubDate>Sun, 07 Apr 2024 18:17:40 +0000</pubDate></item><item><title>Ubuntu安装Python</title><link>https://2064878930.github.io/post/Ubuntu-an-zhuang-Python.html</link><description>出现 ` 权限问题` 进入超级用户&#13;
 &#13;
 ```&#13;
 sudo -i&#13;
