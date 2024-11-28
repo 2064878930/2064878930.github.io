@@ -28,7 +28,7 @@ pyinstaller --onefile --noconsole your_script.py
 
 
 
-### 注意事项
+### 注意事项 
 
 - 确保你的 Python 脚本在打包前能够正常运行。
 - 打包的 EXE 文件可能会比较大，因为它包含了 Python 解释器和所有依赖库。
